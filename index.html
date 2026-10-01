@@ -315,7 +315,7 @@ const PRODUCTS = [
  ["VOCA MAX 旗艦降噪耳罩耳機","主動降噪加通話降噪，專心工作、安心開會。","voca-max","69f998dae8fc8486a45bba43/original.jpg"],
  ["VIBE 防水環繞藍牙音響","室內戶外兩用，兩台可以無線串聯成雙聲道。","vibe-bluetooth-speaker","67bfe4c5b40add000e44e603/original.jpg"],
  ["HEAR AI 輔聽耳機","音樂耳機結合輔聽功能，聽音樂、通話、輔聽一機多用。","hear-ai-earbuds","67bfe450ec4f19000e8214bc/original.jpg"]];
-const PHOTOS = {"大未來": "photos/daweilai.jpg?v=d28bdf55", "Teresa": "photos/teresa.jpg?v=af16c919", "秀秀": "photos/xiuxiu.jpg?v=93c439b3"};
+const PHOTOS = {"大未來": "photos/daweilai.jpg?v=d28bdf55", "Steven": "photos/steven.jpg?v=466c3de6", "Teresa": "photos/teresa.jpg?v=af16c919", "秀秀": "photos/xiuxiu.jpg?v=93c439b3", "雅雯": "photos/yawen.jpg?v=9164de33"};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 /* 歌詞 */
@@ -352,7 +352,7 @@ const HISTORY=[
  [2024,[["帶我去找夜生活","告五人"],["倔強","五月天"]]],
  [2023,[["天天想你","張雨生"],["愛在夏天","告五人"]]]];
 document.getElementById('tl').innerHTML=HISTORY.map(([y,ss])=>`<li class="${y===2026?'now':''}"><div class="yr">${y}${y===2026?'<b>本屆</b>':''}</div><ul>${ss.map(([t,a])=>`<li>〈${esc(t)}〉<small>${esc(a)}</small></li>`).join('')}</ul></li>`).join('');
-const GALLERY = {"2025": ["gallery/2025/full/2025-daweilai-stage.jpg?v=34d58ee9"], "2026": ["gallery/2026/full/2026-xiuxiu-rehearsal-1.jpg?v=c9748b29", "gallery/2026/full/2026-xiuxiu-rehearsal-2.jpg?v=697cf60d"]};
+const GALLERY = {"2025": ["gallery/2025/full/2025-daweilai-stage.jpg?v=34d58ee9"], "2026": ["gallery/2026/full/2026-steven-rehearsal.jpg?v=793a3c7d", "gallery/2026/full/2026-xiuxiu-rehearsal-1.jpg?v=c9748b29", "gallery/2026/full/2026-xiuxiu-rehearsal-2.jpg?v=697cf60d"]};
 const gEl=document.getElementById('gallery');const flat=[];
 const years=Object.keys(GALLERY).sort((a,b)=>b.localeCompare(a));
 if(!years.length){gEl.innerHTML='<div class="empty"><div class="ic">📸</div><b>照片整理中</b>歷年演出與練團照片，敬請期待！</div>';}
