@@ -47,8 +47,8 @@ body{margin:0;color:var(--text);min-height:100vh;overflow-x:hidden;line-height:1
 
 /* ===== 主選單 ===== */
 nav.main{position:sticky;top:0;z-index:20;background:rgba(7,5,5,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-.mainlist{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:8px 0}
-.mt{appearance:none;border:0;background:transparent;color:var(--muted);font:inherit;font-size:15px;font-weight:800;padding:8px 2px;min-height:44px;border-radius:10px;cursor:pointer;position:relative}
+.mainlist{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;padding:8px 0}
+.mt{appearance:none;border:0;background:transparent;color:var(--muted);font:inherit;font-size:15px;font-weight:800;padding:8px 0;min-height:44px;white-space:nowrap;border-radius:10px;cursor:pointer;position:relative}
 .mt small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.8;font-family:var(--brush);font-weight:600}
 .mt[aria-selected="true"]{color:#fff}
 .mt[aria-selected="true"]::after{content:"";position:absolute;left:14%;right:14%;bottom:3px;height:5px;border-radius:3px;transform:skewX(-20deg)}
@@ -148,6 +148,32 @@ nav.main{position:sticky;top:0;z-index:20;background:rgba(7,5,5,.96);border-bott
 .btn{display:inline-block;background:var(--gold);color:var(--ink);font-weight:900;font-size:15px;padding:10px 16px;border-radius:10px;text-decoration:none}
 .note{font-size:14px;color:var(--muted);margin:14px 0 0}
 
+.yearnote{margin:0 0 10px;color:var(--muted);font-size:14px;font-weight:700;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.yearnote b{background:var(--gold);color:var(--ink);font-weight:900;font-size:14px;padding:2px 10px;border-radius:4px}
+.tl{list-style:none;margin:0;padding:0 0 0 18px;border-left:3px solid var(--gold)}
+.tl li{position:relative;padding:0 0 18px 14px}
+.tl li::before{content:"";position:absolute;left:-27px;top:4px;width:15px;height:15px;border-radius:50%;background:var(--bg);border:3px solid var(--gold)}
+.tl li.now::before{background:var(--gold);box-shadow:0 0 0 4px rgba(242,193,78,.25)}
+.tl .yr{font-family:var(--brush);font-weight:800;font-size:22px;line-height:1.1;color:#fff}
+.tl .yr b{font-family:inherit;font-size:12px;font-weight:900;background:var(--red);color:#fff;border-radius:4px;padding:2px 7px;margin-left:8px;vertical-align:3px;letter-spacing:.06em}
+.tl ul{list-style:none;margin:6px 0 0;padding:0}
+.tl ul li{padding:3px 0;font-size:17px;font-weight:700}
+.tl ul li::before{display:none}
+.tl ul li small{font-size:14px;color:var(--muted);font-weight:400;margin-left:6px}
+.empty{text-align:center;padding:40px 16px;border:1px dashed var(--line);border-radius:16px;color:var(--muted)}
+.empty b{display:block;font-size:20px;color:var(--text);margin:6px 0}
+.empty .ic{font-size:40px}
+.gyear{font-family:var(--brush);font-weight:800;font-size:20px;margin:18px 0 8px}
+.ggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.ggrid button{padding:0;border:0;background:#222;aspect-ratio:1/1;cursor:pointer;overflow:hidden;border-radius:4px}
+.ggrid img{width:100%;height:100%;object-fit:cover;display:block}
+.lb{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center}
+.lb.on{display:flex}
+.lb img{max-width:96vw;max-height:84vh;object-fit:contain}
+.lb button{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;font-size:26px;width:48px;height:48px;border-radius:50%;cursor:pointer}
+.lb .x{top:14px;right:14px}.lb .pv{left:8px;top:50%;transform:translateY(-50%)}.lb .nx{right:8px;top:50%;transform:translateY(-50%)}
+.lb .cap{position:absolute;bottom:14px;left:0;right:0;text-align:center;color:var(--muted);font-size:14px}
+@media (max-height:600px){.logo{width:min(38vw,150px)}.hero{padding-bottom:12px}.eventbar{margin-top:10px}}
 footer{text-align:center;padding:22px 0 44px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
 footer b{display:block;font-family:inherit;font-weight:900;letter-spacing:.08em;color:#fff;font-size:18px;margin-bottom:2px}
 
@@ -189,13 +215,15 @@ footer b{display:block;font-family:inherit;font-weight:900;letter-spacing:.08em;
 <nav class="main" aria-label="主選單"><div class="wrap mainlist" role="tablist">
   <button class="mt" role="tab" data-p="lyrics">歌詞<small>Lyrics</small></button>
   <button class="mt" role="tab" data-p="tonight">今晚<small>Tonight</small></button>
-  <button class="mt" role="tab" data-p="band">團員<small>Band</small></button>
+  <button class="mt" role="tab" data-p="band">樂團<small>Band</small></button>
+  <button class="mt" role="tab" data-p="photos">相簿<small>Photos</small></button>
   <button class="mt" role="tab" data-p="xround">XROUND<small>Gear</small></button>
 </div></nav>
 
 <main class="wrap">
   <!-- 歌詞 -->
   <section class="page" id="p-lyrics" role="tabpanel">
+    <p class="yearnote"><b>2026 成發演出歌詞</b>10/7 河岸留言</p>
     <div class="tablist" role="tablist" id="tablist"></div>
     <div id="songs"></div>
   </section>
@@ -241,6 +269,15 @@ footer b{display:block;font-family:inherit;font-weight:900;letter-spacing:.08em;
     <h2 class="h"><span class="en">Members</span>樂團成員</h2>
     <div class="mgrid" id="mgrid"></div>
     <p>啤酒發射台因一群喜歡音樂的EMBA同好而生。大家在工作和課業的壓力之餘，透過音樂交流、練團和舞台表演，找到一種平衡與快樂，也藉此讓更多人感受到EMBA生活的多彩面貌。</p><p class="quote">練團總是笑聲不斷，即使每位成員行程滿檔，仍背著樂器、抓緊時間來排練。有人開玩笑說：「我們的行程表比音符還密！」這份對音樂的熱情，正是啤酒發射台樂團最真實的特色。</p><p>今年，我們想把團員的默契與熱情透過音樂完整呈現，讓每個音符都成為與觀眾交流的橋樑，希望大家能在音樂中感受到自由、快樂和滿滿的團隊力量。</p>
+    <div class="leo"></div>
+    <h2 class="h"><span class="en">Setlist History</span>歷年演出曲目</h2>
+    <ol class="tl" id="tl"></ol>
+  </section>
+
+  <!-- 相簿 -->
+  <section class="page" id="p-photos" role="tabpanel">
+    <h2 class="h"><span class="en">Photos</span>活動相簿</h2>
+    <div id="gallery"></div>
   </section>
 
   <!-- XROUND -->
@@ -309,7 +346,25 @@ document.getElementById('pgrid').innerHTML=PRODUCTS.map(([t,d,h,img])=>
   <div class="bd"><h3>${esc(t)}</h3><p>${esc(d)}</p><span class="go">前往官網 →</span></div></a>`).join('');
 
 /* 導覽：#1~#3 歌詞、#tonight、#band、#xround */
-const PAGES=['lyrics','tonight','band','xround'];
+const HISTORY=[
+ [2026,[["好膽你就來","阿密特"],["彩虹","動力火車"],["金盞花","愛繆 あいみょん"]]],
+ [2025,[["至少還有你","林憶蓮"],["心中無別人","五月天"]]],
+ [2024,[["帶我去找夜生活","告五人"],["倔強","五月天"]]],
+ [2023,[["天天想你","張雨生"],["愛在夏天","告五人"]]]];
+document.getElementById('tl').innerHTML=HISTORY.map(([y,ss])=>`<li class="${y===2026?'now':''}"><div class="yr">${y}${y===2026?'<b>本屆</b>':''}</div><ul>${ss.map(([t,a])=>`<li>〈${esc(t)}〉<small>${esc(a)}</small></li>`).join('')}</ul></li>`).join('');
+const GALLERY = {};
+const gEl=document.getElementById('gallery');const flat=[];
+const years=Object.keys(GALLERY).sort((a,b)=>b.localeCompare(a));
+if(!years.length){gEl.innerHTML='<div class="empty"><div class="ic">📸</div><b>照片整理中</b>歷年演出與練團照片，敬請期待！</div>';}
+else{gEl.innerHTML=years.map(y=>`<div class="gyear">${esc(y)}</div><div class="ggrid">${GALLERY[y].map(src=>{flat.push([src,y]);const i=flat.length-1;return `<button data-i="${i}" aria-label="放大 ${esc(y)} 照片 ${i+1}"><img src="${esc(src.replace('/full/','/thumb/'))}" alt="${esc(y)} 活動照片" loading="lazy" width="300" height="300"></button>`}).join('')}</div>`).join('');
+ const lb=document.createElement('div');lb.className='lb';lb.innerHTML='<img alt=""><button class="x" aria-label="關閉">✕</button><button class="pv" aria-label="上一張">‹</button><button class="nx" aria-label="下一張">›</button><div class="cap"></div>';document.body.appendChild(lb);
+ let cur=0;const show=i=>{cur=(i+flat.length)%flat.length;lb.querySelector('img').src=flat[cur][0];lb.querySelector('.cap').textContent=`${flat[cur][1]}　${cur+1} / ${flat.length}`;lb.classList.add('on')};
+ gEl.addEventListener('click',e=>{const b=e.target.closest('button[data-i]');if(b)show(+b.dataset.i)});
+ lb.querySelector('.x').onclick=()=>lb.classList.remove('on');lb.querySelector('.pv').onclick=()=>show(cur-1);lb.querySelector('.nx').onclick=()=>show(cur+1);
+ lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('on')});
+ let sx=null;lb.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});lb.addEventListener('touchend',e=>{if(sx===null)return;const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40)show(cur+(dx<0?1:-1));sx=null});
+ addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowRight')show(cur+1);if(e.key==='ArrowLeft')show(cur-1)});}
+const PAGES=['lyrics','tonight','band','photos','xround'];
 function go(p,song,scroll){
   document.querySelectorAll('.mt').forEach(b=>b.setAttribute('aria-selected',b.dataset.p===p));
   PAGES.forEach(x=>document.getElementById('p-'+x).classList.toggle('on',x===p));
