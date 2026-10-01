@@ -119,7 +119,7 @@ nav.main{position:sticky;top:0;z-index:20;background:rgba(7,5,5,.96);border-bott
 .mcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .mcard .ph{position:relative;aspect-ratio:3/4;background:linear-gradient(160deg,#2a1c0c,#0e0906);display:grid;place-items:center}
 .mcard .ph img{width:100%;height:100%;object-fit:cover;display:block}
-.mcard .ph .ini{font-family:var(--brush);font-size:40px;color:var(--gold);opacity:.75}
+.mcard .ph .ini{font-family:var(--brush);font-size:min(8vw,34px);padding:0 8px;text-align:center;line-height:1.1;margin-top:-30%;color:var(--gold);opacity:.75}
 .mcard .ph::after{content:"";position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(transparent,rgba(0,0,0,.75))}
 .mcard .ph .nm{position:absolute;z-index:2;left:10px;bottom:6px;right:8px;font-size:20px;font-weight:900;line-height:1.2;text-shadow:0 2px 6px #000}
 .mcard .ph .nm span{display:block;font-size:14px;font-weight:800;color:var(--gold)}
@@ -278,7 +278,7 @@ const PRODUCTS = [
  ["VOCA MAX 旗艦降噪耳罩耳機","主動降噪加通話降噪，專心工作、安心開會。","voca-max","69f998dae8fc8486a45bba43/original.jpg"],
  ["VIBE 防水環繞藍牙音響","室內戶外兩用，兩台可以無線串聯成雙聲道。","vibe-bluetooth-speaker","67bfe4c5b40add000e44e603/original.jpg"],
  ["HEAR AI 輔聽耳機","音樂耳機結合輔聽功能，聽音樂、通話、輔聽一機多用。","hear-ai-earbuds","67bfe450ec4f19000e8214bc/original.jpg"]];
-const PHOTOS = {};
+const PHOTOS = {"大未來": "photos/daweilai.jpg"};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 /* 歌詞 */
@@ -299,7 +299,7 @@ box.addEventListener('click',e=>{const b=e.target.closest('.mode button');if(!b)
 
 /* 團員 */
 document.getElementById('mgrid').innerHTML=MEMBERS.map(([k,n,nick,role,coh,d])=>{
-  const ph=PHOTOS[k]?`<img src="${esc(PHOTOS[k])}" alt="${esc(n)} ${esc(nick)}" loading="lazy" width="600" height="800">`:`<span class="ini">${esc((nick||n).slice(0,2))}</span>`;
+  const ph=PHOTOS[k]?`<img src="${esc(PHOTOS[k])}" alt="${esc(n)} ${esc(nick)}" loading="lazy" width="600" height="800">`:`<span class="ini">${esc(nick||n.slice(1))}</span>`;
   return `<article class="mcard"><div class="ph">${ph}<div class="nm">${esc(n)}${nick?`<span>${esc(nick)}</span>`:''}</div></div>
   <div class="bd"><p class="role">${esc(role)}</p><p class="cohort">EMBA ${esc(coh)}</p><p class="desc">${esc(d)}</p></div></article>`}).join('');
 
