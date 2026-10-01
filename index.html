@@ -3,49 +3,86 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0a0507">
-<title>XRound 啤酒發射台｜10/7 河岸留言 歌詞</title>
-<meta name="description" content="XRound 啤酒發射台 10/7 河岸留言 演出歌詞">
+<meta name="theme-color" content="#070505">
+<title>XROUND 啤酒發射台｜10/7 河岸留言</title>
+<meta name="description" content="XROUND 啤酒發射台 2026/10/7 西門町河岸留言演出：歌詞、演出資訊、團員介紹與 XROUND 產品">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a0507;--panel:rgba(255,255,255,.05);--line:rgba(255,255,255,.12);
-  --text:#f3eee6;--muted:#b3aba0;--accent:#ffb627;--accent2:#ff4f8b;--ink:#1a1206;--zh:#d2cabe}
+:root{--bg:#070505;--panel:rgba(255,255,255,.05);--line:rgba(255,255,255,.13);
+  --text:#f5efe6;--muted:#b9afa3;--gold:#f2c14e;--gold2:#ffdf8a;--red:#e3262e;--pink:#fa4688;--ink:#160d02;--zh:#d6cdc2;
+  --brush:"Permanent Marker",cursive}
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--text);min-height:100vh;
-  font-family:-apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.6;overflow-x:hidden}
-.wrap{max-width:640px;margin:0 auto;padding:0 18px}
-.hero{position:relative;text-align:center;padding:34px 0 26px;overflow:hidden}
-.logo{display:block;margin:0 auto 10px;max-width:170px;max-height:100px}
-.brand{margin:0;line-height:1}
-.brand .x{display:block;font-size:52px;font-weight:900;letter-spacing:.04em;font-style:italic}
-.brand .zh{display:block;font-size:22px;font-weight:700;letter-spacing:.35em;margin-top:8px;padding-left:.35em}
-.event{display:inline-flex;gap:10px;align-items:center;margin:16px 0 0;font-size:16px;font-weight:700;
-  border-radius:999px;padding:6px 16px}
-.members{margin:12px 0 0;color:var(--muted);font-size:15px;letter-spacing:.04em}
-nav.tabs{position:sticky;top:0;z-index:5;padding:10px 0 12px;
-  background:color-mix(in srgb,var(--bg) 96%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--line)}
-.tablist{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.tab{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--text);
-  border-radius:14px;padding:8px 4px;min-height:54px;font:inherit;font-size:15px;font-weight:700;line-height:1.25;cursor:pointer}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;color:var(--text);min-height:100vh;overflow-x:hidden;line-height:1.6;
+  font-family:-apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+  background:radial-gradient(80% 38% at 50% 0%,rgba(242,193,78,.22),transparent 70%),
+             radial-gradient(50% 30% at 0% 8%,rgba(227,38,46,.18),transparent 70%),var(--bg);background-attachment:fixed}
+.wrap{max-width:660px;margin:0 auto;padding:0 18px}
+
+/* ===== 頁首（海報元素） ===== */
+.hero{position:relative;text-align:center;padding:16px 0 18px;overflow:hidden}
+.hero::before{content:"";position:absolute;left:50%;top:-30px;width:900px;height:520px;transform:translateX(-50%);pointer-events:none;opacity:.6;
+  background:conic-gradient(from 160deg at 50% 0,transparent 0 6deg,rgba(255,223,138,.22) 9deg,transparent 13deg,transparent 22deg,rgba(255,223,138,.16) 25deg,transparent 29deg,transparent 38deg,rgba(255,223,138,.2) 41deg,transparent 45deg);
+  animation:sway 8s ease-in-out infinite alternate}
+@keyframes sway{from{transform:translateX(-50%) rotate(-5deg)}to{transform:translateX(-50%) rotate(5deg)}}
+.hero .inner{position:relative;z-index:2}
+.tag{position:absolute;z-index:3;font-family:var(--brush);font-size:13px;line-height:1.25;color:#fff;opacity:.9;text-align:left}
+.tag.l{left:10px;top:12px;transform:rotate(-9deg)}
+.tag.r{right:10px;top:12px;transform:rotate(7deg);font-family:inherit;font-weight:800;text-align:center;font-size:13px}
+.tag.r b{color:var(--gold)}
+.xr-logo{display:block;width:min(40vw,160px);height:auto;margin:10px auto 0}
+.slogan{margin:8px 0 0;font-family:var(--brush);font-size:15px;color:#fff;opacity:.92}
+.slogan.zh{font-family:inherit;font-weight:800;font-size:15px;margin-top:2px}
+.slogan b{color:var(--gold)}
+.logo{display:block;width:min(46vw,190px);height:auto;margin:0 auto -4px;
+  -webkit-mask:radial-gradient(closest-side,#000 72%,transparent 100%);mask:radial-gradient(closest-side,#000 72%,transparent 100%)}
+.live{font-family:var(--brush);font-size:30px;margin:0;line-height:1;transform:rotate(-4deg);color:#fff;
+  text-shadow:0 2px 0 rgba(0,0,0,.6)}
+.live u{text-decoration:none;background:linear-gradient(transparent 62%,var(--red) 62% 86%,transparent 86%);padding:0 4px}
+.eventbar{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:14px 0 0}
+.eventbar span{background:var(--gold);color:var(--ink);font-weight:900;font-size:15px;padding:5px 12px;border-radius:4px;transform:skewX(-8deg);box-shadow:3px 3px 0 var(--red)}
+.eventbar span i{display:inline-block;transform:skewX(8deg);font-style:normal}
+
+/* ===== 主選單 ===== */
+nav.main{position:sticky;top:0;z-index:20;background:rgba(7,5,5,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.mainlist{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:8px 0}
+.mt{appearance:none;border:0;background:transparent;color:var(--muted);font:inherit;font-size:15px;font-weight:800;padding:8px 2px;min-height:44px;border-radius:10px;cursor:pointer;position:relative}
+.mt small{display:block;font-size:12px;font-weight:700;letter-spacing:.12em;opacity:.8;font-family:var(--brush);font-weight:400}
+.mt[aria-selected="true"]{color:#fff}
+.mt[aria-selected="true"]::after{content:"";position:absolute;left:14%;right:14%;bottom:3px;height:5px;border-radius:3px;transform:skewX(-20deg)}
+.page{display:none;padding:18px 0 34px}
+.page.on{display:block;animation:in .3s ease}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* 標題：紅色筆刷底線 */
+.h{font-size:24px;font-weight:900;margin:6px 0 14px;line-height:1.3;display:inline-block;position:relative;z-index:0}
+.h::after{content:"";position:absolute;z-index:-1;left:-6px;right:-10px;bottom:2px;height:11px;transform:skewX(-18deg) rotate(-1deg);border-radius:2px 8px 3px 6px;opacity:.9}
+.h .en{display:block;font-family:var(--brush);font-weight:400;font-size:14px;letter-spacing:.06em;color:var(--gold)}
+
+/* 豹紋細線 */
+.leo{height:10px;margin:22px 0;border-radius:5px;opacity:.75;
+  background:radial-gradient(circle at 20% 40%,#1a0f04 2.2px,transparent 2.6px) 0 0/18px 10px,
+             radial-gradient(circle at 70% 70%,#1a0f04 1.8px,transparent 2.2px) 0 0/14px 10px,
+             linear-gradient(90deg,#b07a2a,#d9a548,#b07a2a)}
+
+/* ===== 歌詞 ===== */
+.tablist{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:6px}
+.tab{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:12px;padding:8px 4px;min-height:54px;font:inherit;font-size:15px;font-weight:800;line-height:1.25;cursor:pointer}
 .tab small{display:block;font-size:12px;font-weight:400;color:var(--muted)}
-.tab .n{color:var(--accent);margin-right:2px}
-.tab[aria-selected="true"]{color:var(--ink);border-color:transparent}
-.tab[aria-selected="true"] small,.tab[aria-selected="true"] .n{color:var(--ink);opacity:.8}
-.song{display:none;padding:22px 0 40px}
-.song.on{display:block;animation:in .35s ease}
-@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.song h2{font-size:28px;margin:0;line-height:1.3}
+.tab .n{color:var(--gold);margin-right:2px}
+.tab[aria-selected="true"] small,.tab[aria-selected="true"] .n{opacity:.85}
+.song{display:none;padding:14px 0 10px}
+.song.on{display:block}
+.song h2{font-size:28px;margin:0;line-height:1.3;font-weight:900}
 .song h2 .o{font-size:16px;color:var(--muted);font-weight:400;margin-left:6px}
-.artist{color:var(--accent);margin:2px 0 18px;font-size:15px;font-weight:700}
+.artist{color:var(--gold);margin:2px 0 18px;font-size:15px;font-weight:700}
 .mode{display:flex;gap:6px;margin:0 0 20px}
-.mode button{flex:1;border:1px solid var(--line);background:transparent;color:var(--muted);
-  border-radius:999px;padding:8px 0;font:inherit;font-size:15px;min-height:42px;cursor:pointer}
-.mode button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);background:rgba(255,182,39,.08)}
+.mode button{flex:1;border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:8px 0;font:inherit;font-size:15px;min-height:42px;cursor:pointer}
 .sec{margin:0 0 24px;padding-left:14px;border-left:3px solid transparent}
-.sec.chorus{border-left-color:var(--accent);background:linear-gradient(90deg,rgba(255,182,39,.10),transparent 80%);
-  border-radius:0 12px 12px 0;padding:10px 0 6px 14px}
-.chip{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.15em;color:var(--accent);margin-bottom:4px}
+.sec.chorus{border-radius:0 12px 12px 0;padding:10px 0 6px 14px}
+.chip{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.15em;margin-bottom:4px}
 .sec.chorus .l,.sec.chorus .jp{color:#fff;font-weight:600}
 .l{font-size:19px;margin:0 0 6px}
 .pair{margin:0 0 14px}
@@ -53,103 +90,202 @@ nav.tabs{position:sticky;top:0;z-index:5;padding:10px 0 12px;
 .zh{font-size:16px;margin:0;color:var(--zh)}
 .hide-zh .zh,.hide-jp .jp{display:none}
 .hide-jp .zh{font-size:19px;color:var(--text)}
-footer{text-align:center;padding:24px 0 48px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
-footer b{display:block;color:var(--text);font-size:18px;margin-bottom:4px}
 
+/* ===== 今晚 ===== */
+.date{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px}
+.date .big{font-size:46px;font-weight:900;line-height:.95;letter-spacing:-.01em}
+.date .big small{display:block;font-size:14px;color:var(--gold);letter-spacing:.1em;font-weight:800}
+.date .info p{margin:0;font-size:16px;line-height:1.5}
+.date .info b{font-size:19px}
+.date .info .sub{color:var(--muted);font-size:14px}
+.callout{margin:16px 0 0;padding:14px 16px;border-radius:14px;font-weight:900;font-size:19px;text-align:center;transform:rotate(-1.2deg);color:var(--ink);background:var(--gold);box-shadow:4px 4px 0 var(--red)}
+.callout small{display:block;font-size:14px;font-weight:700}
+.setlist{list-style:none;padding:0;margin:0;counter-reset:s}
+.setlist li{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:19px;font-weight:800}
+.setlist li::before{counter-increment:s;content:counter(s);flex:0 0 34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--ink);font-weight:900}
+.setlist small{display:block;font-size:14px;color:var(--muted);font-weight:400}
+.setlist a{margin-left:auto;font-size:14px;color:var(--gold);text-decoration:none;white-space:nowrap}
+.prize{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center;background:linear-gradient(135deg,rgba(227,38,46,.22),rgba(242,193,78,.12));border:1px solid rgba(242,193,78,.4);border-radius:16px;padding:14px}
+.prize img{width:120px;height:120px;object-fit:cover;border-radius:12px;background:#fff}
+.prize h3{margin:0;font-size:20px;line-height:1.3}
+.prize .n3{color:var(--gold);font-size:30px;font-weight:900}
+.prize p{margin:4px 0 0;font-size:15px;color:var(--zh)}
+.rules{margin:12px 0 0;padding-left:20px;font-size:15px;color:var(--zh)}
+.rules li{margin:4px 0}
 
-/* ===== Logo 配色共用 ===== */
-:root{--bg:#0a0507;--pink:#fa4688;--gold:#ffc02e;--foam:#fcfbf5;--accent:var(--pink);--ink:#1a0610}
-body{background:
-  radial-gradient(90% 45% at 50% 0%,rgba(250,70,136,.30),transparent 70%),
-  radial-gradient(60% 30% at 85% 12%,rgba(255,192,46,.18),transparent 70%),var(--bg);background-attachment:fixed}
-.hero{padding:14px 0 22px}
-.hero::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.55;
-  background:conic-gradient(from 180deg at 50% 38%,transparent 0 8deg,rgba(250,70,136,.22) 11deg,transparent 15deg,transparent 40deg,rgba(255,192,46,.18) 43deg,transparent 47deg,transparent 80deg,rgba(250,70,136,.18) 83deg,transparent 87deg,transparent 125deg,rgba(255,192,46,.16) 128deg,transparent 132deg,transparent 170deg,rgba(250,70,136,.22) 173deg,transparent 177deg,transparent 215deg,rgba(255,192,46,.18) 218deg,transparent 222deg,transparent 262deg,rgba(250,70,136,.18) 265deg,transparent 269deg,transparent 305deg,rgba(255,192,46,.16) 308deg,transparent 312deg,transparent 350deg);
-  animation:spin 60s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.hero .inner{position:relative;z-index:2}
-.hero .bub{position:absolute;bottom:-12px;border-radius:50%;border:1.5px solid rgba(252,251,245,.35);animation:up linear infinite;z-index:1}
-@keyframes up{to{transform:translateY(-420px);opacity:0}}
-.xr-logo{display:block;width:min(40vw,150px);height:auto;margin:6px auto 0}
-.xr{margin:0;font-size:15px;font-weight:900;letter-spacing:.5em;padding-left:.5em;color:var(--foam);font-style:italic}
-.xr b{color:var(--gold)}
-.logo{width:min(64vw,260px);height:auto;max-width:none;max-height:none;margin:-2px auto -6px;
-  -webkit-mask:radial-gradient(closest-side,#000 72%,transparent 100%);mask:radial-gradient(closest-side,#000 72%,transparent 100%)}
-h1.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-.event{margin:6px 0 0;font-size:17px;font-weight:800;color:var(--ink);background:var(--gold);
-  transform:skewX(-10deg);border-radius:6px;padding:6px 18px;box-shadow:4px 4px 0 var(--pink)}
-.event>span{transform:skewX(10deg);display:inline-block}
-.members{color:#e9dfe3}
-.members i{font-style:normal;color:var(--pink);margin:0 4px}
-.tab .n{color:var(--gold)}
-.song h2{font-weight:900}
-.artist{color:var(--gold)}
-footer b{color:var(--pink)}
+/* ===== 團員 ===== */
+.about p{font-size:16px;line-height:1.85;color:#e9e1d8;margin:0 0 14px}
+.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:6px 0 22px}
+.mcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.mcard .ph{position:relative;aspect-ratio:3/4;background:linear-gradient(160deg,#2a1c0c,#0e0906);display:grid;place-items:center}
+.mcard .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.mcard .ph .ini{font-family:var(--brush);font-size:40px;color:var(--gold);opacity:.75}
+.mcard .ph::after{content:"";position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(transparent,rgba(0,0,0,.75))}
+.mcard .ph .nm{position:absolute;z-index:2;left:10px;bottom:6px;right:8px;font-size:20px;font-weight:900;line-height:1.2;text-shadow:0 2px 6px #000}
+.mcard .ph .nm span{display:block;font-size:14px;font-weight:800;color:var(--gold)}
+.mcard .bd{padding:10px 12px 12px}
+.mcard .role{font-size:14px;color:var(--gold);font-weight:800;margin:0;line-height:1.4}
+.mcard .cohort{font-size:14px;color:var(--muted);margin:0 0 4px}
+.mcard .desc{font-size:15px;margin:0;line-height:1.6}
+.quote{border-left:3px solid var(--gold);padding-left:12px}
 
-/* L1：粉紅主導 */
-.t-l1 .tab[aria-selected="true"]{background:var(--pink);color:#fff;box-shadow:0 0 0 2px var(--foam) inset,0 6px 20px rgba(250,70,136,.45)}
-.t-l1 .tab[aria-selected="true"] small,.t-l1 .tab[aria-selected="true"] .n{color:#fff}
-.t-l1 .sec.chorus{border-left-color:var(--pink);background:linear-gradient(90deg,rgba(250,70,136,.16),transparent 85%)}
-.t-l1 .chip{color:var(--pink)}
-.t-l1 .mode button[aria-pressed="true"]{border-color:var(--pink);color:#fff;background:rgba(250,70,136,.25)}
-.t-l1 .song h2{text-shadow:2px 2px 0 var(--pink)}
+/* ===== XROUND ===== */
+.brand{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px 16px;font-size:15px;color:var(--zh)}
+.brand img{display:block;width:120px;margin:0 0 8px}
+.feat{position:relative;background:#fff;color:#111;border-radius:18px;overflow:hidden;margin:16px 0}
+.feat img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
+.feat .badge{position:absolute;top:12px;left:12px;background:var(--red);color:#fff;font-weight:900;font-size:14px;padding:5px 10px;border-radius:6px;transform:rotate(-3deg)}
+.feat .bd{padding:14px 16px 16px;background:#111;color:var(--text)}
+.feat h3{margin:0;font-size:22px}
+.feat p{margin:6px 0 10px;font-size:15px;color:var(--zh)}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pcard{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;color:inherit;text-decoration:none}
+.pcard img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#fff;display:block}
+.pcard .bd{padding:10px 12px 12px;display:flex;flex-direction:column;flex:1}
+.pcard h3{margin:0;font-size:16px;line-height:1.35}
+.pcard p{margin:4px 0 8px;font-size:14px;color:var(--zh);line-height:1.55;flex:1}
+.go{display:inline-block;font-size:14px;font-weight:800;color:var(--gold);text-decoration:none}
+.btn{display:inline-block;background:var(--gold);color:var(--ink);font-weight:900;font-size:15px;padding:10px 16px;border-radius:10px;text-decoration:none}
+.note{font-size:14px;color:var(--muted);margin:14px 0 0}
 
-/* L2：金色主導＋粉紅點綴 */
-.t-l2 .tab[aria-selected="true"]{background:var(--gold);color:var(--ink);box-shadow:3px 3px 0 var(--pink)}
-.t-l2 .tab[aria-selected="true"] small,.t-l2 .tab[aria-selected="true"] .n{color:var(--ink)}
-.t-l2 .sec.chorus{border-left-color:var(--gold);background:linear-gradient(90deg,rgba(255,192,46,.13),transparent 85%)}
-.t-l2 .chip{color:var(--gold)}
-.t-l2 .mode button[aria-pressed="true"]{border-color:var(--gold);color:var(--gold);background:rgba(255,192,46,.1)}
-.t-l2 .song h2{text-shadow:2px 2px 0 var(--pink)}
-.song h2 .o{text-shadow:none}
+footer{text-align:center;padding:22px 0 44px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+footer b{display:block;font-family:var(--brush);font-weight:400;color:#fff;font-size:20px;margin-bottom:2px}
 
-/* ===== 樂團介紹 ===== */
-.about-link{display:inline-block;margin-top:10px;color:var(--gold);font-size:15px;font-weight:700;text-decoration:none;border-bottom:1px dashed var(--gold);padding-bottom:1px}
-.about{scroll-margin-top:92px;padding:34px 18px 20px;border-top:1px solid var(--line)}
-.about h2{font-size:26px;font-weight:900;margin:0 0 14px;text-shadow:2px 2px 0 var(--pink)}
-.about h2 span{display:block;font-size:13px;letter-spacing:.4em;color:var(--pink);text-shadow:none;font-style:italic}
-.about p{font-size:16px;line-height:1.85;color:#e7dde1;margin:0 0 14px}
-.about .sub{font-size:18px;color:var(--gold);margin:22px 0 12px;letter-spacing:.1em}
-.mgrid{display:grid;grid-template-columns:1fr;gap:12px;margin-bottom:24px}
-@media(min-width:520px){.mgrid{grid-template-columns:1fr 1fr}}
-.mcard{background:rgba(255,255,255,.045);border:1px solid var(--line);border-left:4px solid var(--pink);border-radius:12px;padding:12px 14px}
-.mcard .role{font-size:14px;color:var(--gold);font-weight:700;margin:0;line-height:1.4}
-.mcard h3{font-size:20px;margin:2px 0 0;line-height:1.35}
-.mcard h3 span{font-size:15px;color:var(--pink);font-weight:700;margin-left:4px}
-.mcard .cohort{font-size:14px;color:var(--muted);margin:0 0 4px;line-height:1.4}
-.mcard .desc{font-size:15px;margin:0;line-height:1.7}
-.about .quote{border-left:3px solid var(--gold);padding-left:12px}
+/* ===== 主題：A 舞台金（金色主導、紅色點綴） ===== */
+.t-gold .mt[aria-selected="true"]::after{background:var(--gold)}
+.t-gold .h::after{background:var(--red)}
+.t-gold .tab[aria-selected="true"]{background:var(--gold);color:var(--ink);border-color:transparent;box-shadow:3px 3px 0 var(--red)}
+.t-gold .tab[aria-selected="true"] small,.t-gold .tab[aria-selected="true"] .n{color:var(--ink);opacity:.8}
+.t-gold .sec.chorus{border-left-color:var(--gold);background:linear-gradient(90deg,rgba(242,193,78,.13),transparent 85%)}
+.t-gold .chip{color:var(--gold)}
+.t-gold .mode button[aria-pressed="true"]{border-color:var(--gold);color:var(--gold);background:rgba(242,193,78,.1)}
+.t-gold .mcard{border-top:3px solid var(--gold)}
+
+/* ===== 主題：B 搖滾紅（紅色主導、金色點綴） ===== */
+.t-red .mt[aria-selected="true"]::after{background:var(--red)}
+.t-red .h::after{background:var(--red)}
+.t-red .tab[aria-selected="true"]{background:var(--red);color:#fff;border-color:transparent;box-shadow:3px 3px 0 var(--gold)}
+.t-red .tab[aria-selected="true"] .n{color:#fff}
+.t-red .sec.chorus{border-left-color:var(--red);background:linear-gradient(90deg,rgba(227,38,46,.18),transparent 85%)}
+.t-red .chip{color:#ff6a6f}
+.t-red .mode button[aria-pressed="true"]{border-color:var(--red);color:#fff;background:rgba(227,38,46,.3)}
+.t-red .mcard{border-top:3px solid var(--red)}
 </style>
-<script>document.documentElement.className='t-l1'</script>
+<script>document.documentElement.className='t-gold'</script>
 </head>
 <body>
-<header class="hero wrap">
-  <div class="inner">
-  <img class="xr-logo" src="xround.png" alt="XROUND" width="276" height="74">
-  <h1 class="sr">XRound 啤酒發射台</h1>
-  <img class="logo" src="logo.jpg" alt="XRound 啤酒發射台 樂團 logo" width="700" height="695">
-  <p class="event"><span>10 / 7　＠ 河岸留言</span></p>
-  <p class="members">Eric<i>✦</i>大未來<i>✦</i>秀秀<i>✦</i>雅雯<i>✦</i>Steven<i>✦</i>Teresa</p>
-  <a class="about-link" href="#about">認識啤酒發射台 ↓</a>
+<header class="hero">
+  <div class="inner wrap">
+    <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">XROUND 啤酒發射台</h1>
+    <img class="xr-logo" src="xround.png" alt="XROUND" width="276" height="74">
+    <img class="logo" src="logo.jpg" alt="啤酒發射台 樂團 logo" width="700" height="695">
+    <p class="live"><u>Live in Taipei</u></p>
+    <p class="slogan">Good Music・Good Beer・Great Friends</p>
+    <p class="slogan zh">音樂 × 啤酒 × <b>好朋友</b>，一起發射快樂！</p>
+    <div class="eventbar"><span><i>2026.10.07 週三</i></span><span><i>西門町 河岸留言</i></span></div>
   </div>
 </header>
-<nav class="tabs"><div class="wrap tablist" role="tablist" id="tablist"></div></nav>
-<main class="wrap" id="songs"></main>
-<section class="about wrap" id="about" aria-labelledby="about-h">
-  <h2 id="about-h"><span>ABOUT</span>關於啤酒發射台</h2>
-  <p>啤酒發射台樂團成員來自不同背景，卻因對音樂的熱情走在一起。有些人延續著年少時的音樂夢，有些人因友情而踏上這條舞台之路，在彼此的鼓勵和支持下組成了這支樂團。經過數月的練團、磨合與碰撞，每位團員不僅在音樂上更契合，也在彼此的陪伴中收穫深厚情誼。</p><p>今年啤酒發射台再次登上玩樂社成果發表會的舞台，每一次演出對我們來說都是熱情與能量的釋放，更是對夢想的一次致敬。我們期待用最真摯的音符，與現場的每一位朋友分享這段旅程的感動與快樂。</p>
-  <h3 class="sub">樂團成員</h3>
-  <div class="mgrid"><article class="mcard"><p class="role">爵士鼓兼團長</p><h3>周倍慶 <span>Eric</span></h3><p class="cohort">EMBA 2019 生醫組</p><p class="desc">團隊的節奏靈魂，總是用穩健的鼓聲凝聚全場。</p></article><article class="mcard"><p class="role">電/木吉他、Bass兼主唱</p><h3>賴建芳 <span>大未來</span></h3><p class="cohort">EMBA 2019 全企組</p><p class="desc">高亢的歌聲和吉他的清脆旋律為團隊定下主色調。</p></article><article class="mcard"><p class="role">電吉他兼主唱</p><h3>曾秀鳳 <span>秀秀</span></h3><p class="cohort">EMBA 2019 國金組</p><p class="desc">細膩與搖滾兼具的聲音，為演出增添多層次風味。</p></article><article class="mcard"><p class="role">鍵盤</p><h3>陳雅雯</h3><p class="cohort">EMBA 2020 全企組</p><p class="desc">以靈動的琴聲編織樂曲細節。</p></article><article class="mcard"><p class="role">電吉他兼主唱</p><h3>翁振源 <span>Steven</span></h3><p class="cohort">EMBA 2022 國金</p><p class="desc">為樂團注入更多搖滾能量和即興火花。</p></article><article class="mcard"><p class="role">貝斯兼主唱</p><h3>鄧玉霞 <span>Teresa</span></h3><p class="cohort">EMBA 2024 國金</p><p class="desc">以沉穩Bass低頻、高亢的歌聲支撐全團的節奏感與厚度。</p></article></div>
-  <p>啤酒發射台因一群喜歡音樂的EMBA同好而生。大家在工作和課業的壓力之餘，透過音樂交流、練團和舞台表演，找到一種平衡與快樂，也藉此讓更多人感受到EMBA生活的多彩面貌。</p><p class="quote">練團總是笑聲不斷，即使每位成員行程滿檔，仍背著樂器、抓緊時間來排練。有人開玩笑說：「我們的行程表比音符還密！」這份對音樂的熱情，正是啤酒發射台樂團最真實的特色。</p><p>今年，我們想把團員的默契與熱情透過音樂完整呈現，讓每個音符都成為與觀眾交流的橋樑，希望大家能在音樂中感受到自由、快樂和滿滿的團隊力量。</p>
-</section>
-<footer class="wrap"><b>XRound 啤酒發射台</b>謝謝你今晚來聽，乾杯 🍺</footer>
+
+<nav class="main" aria-label="主選單"><div class="wrap mainlist" role="tablist">
+  <button class="mt" role="tab" data-p="lyrics">歌詞<small>Lyrics</small></button>
+  <button class="mt" role="tab" data-p="tonight">今晚<small>Tonight</small></button>
+  <button class="mt" role="tab" data-p="band">團員<small>Band</small></button>
+  <button class="mt" role="tab" data-p="xround">XROUND<small>Gear</small></button>
+</div></nav>
+
+<main class="wrap">
+  <!-- 歌詞 -->
+  <section class="page" id="p-lyrics" role="tabpanel">
+    <div class="tablist" role="tablist" id="tablist"></div>
+    <div id="songs"></div>
+  </section>
+
+  <!-- 今晚 -->
+  <section class="page" id="p-tonight" role="tabpanel">
+    <h2 class="h"><span class="en">Tonight</span>今晚演出</h2>
+    <div class="date">
+      <div class="big"><small>2026</small>10.07</div>
+      <div class="info">
+        <p><b>週三 WED.</b></p>
+        <p><b>西門町 河岸留言</b></p>
+        <p class="sub">Riverside Live House</p>
+        <p>6:30 – 9:30 PM<span class="sub">（6:00 PM 入場）</span></p>
+      </div>
+    </div>
+    <div class="callout">壓軸演出，請留到最後！<small>我們唱壓軸，留到最後才有機會把耳機帶回家</small></div>
+    <div class="leo"></div>
+    <h2 class="h"><span class="en">Setlist</span>今晚演唱</h2>
+    <ol class="setlist">
+      <li><span>好膽你就來<small>阿密特</small></span><a href="#1">看歌詞 →</a></li>
+      <li><span>彩虹<small>動力火車</small></span><a href="#2">看歌詞 →</a></li>
+      <li><span>金盞花<small>愛繆 あいみょん（日文歌曲）</small></span><a href="#3">看歌詞 →</a></li>
+    </ol>
+    <div class="leo"></div>
+    <h2 class="h"><span class="en">Lucky Draw</span>現場抽獎</h2>
+    <div class="prize">
+      <img src="https://img.shoplineapp.com/media/image_clips/6abb34a3f8036ec5b626915e/original.jpg" alt="XROUND VeraClip 開放式耳夾耳機" loading="lazy" width="120" height="120">
+      <div><h3>XROUND VeraClip<br>開放式耳夾耳機</h3><p>共 <span class="n3">3</span> 副，等你帶回家</p></div>
+    </div>
+    <ul class="rules">
+      <li>抽獎序號寫在入場時拿到的 DM 上</li>
+      <li>得獎者須持本張 DM 現場兌獎</li>
+      <li>抽獎在壓軸演出時進行，請留到最後</li>
+    </ul>
+  </section>
+
+  <!-- 團員 -->
+  <section class="page about" id="p-band" role="tabpanel">
+    <h2 class="h"><span class="en">The Band</span>關於啤酒發射台</h2>
+    <p>啤酒發射台樂團成員來自不同背景，卻因對音樂的熱情走在一起。有些人延續著年少時的音樂夢，有些人因友情而踏上這條舞台之路，在彼此的鼓勵和支持下組成了這支樂團。經過數月的練團、磨合與碰撞，每位團員不僅在音樂上更契合，也在彼此的陪伴中收穫深厚情誼。</p><p>今年啤酒發射台再次登上玩樂社成果發表會的舞台，每一次演出對我們來說都是熱情與能量的釋放，更是對夢想的一次致敬。我們期待用最真摯的音符，與現場的每一位朋友分享這段旅程的感動與快樂。</p>
+    <div class="leo"></div>
+    <h2 class="h"><span class="en">Members</span>樂團成員</h2>
+    <div class="mgrid" id="mgrid"></div>
+    <p>啤酒發射台因一群喜歡音樂的EMBA同好而生。大家在工作和課業的壓力之餘，透過音樂交流、練團和舞台表演，找到一種平衡與快樂，也藉此讓更多人感受到EMBA生活的多彩面貌。</p><p class="quote">練團總是笑聲不斷，即使每位成員行程滿檔，仍背著樂器、抓緊時間來排練。有人開玩笑說：「我們的行程表比音符還密！」這份對音樂的熱情，正是啤酒發射台樂團最真實的特色。</p><p>今年，我們想把團員的默契與熱情透過音樂完整呈現，讓每個音符都成為與觀眾交流的橋樑，希望大家能在音樂中感受到自由、快樂和滿滿的團隊力量。</p>
+  </section>
+
+  <!-- XROUND -->
+  <section class="page" id="p-xround" role="tabpanel">
+    <h2 class="h"><span class="en">Sponsor</span>XROUND 聲學品牌</h2>
+    <div class="brand"><img src="xround.png" alt="XROUND" width="276" height="74">
+      台灣聲學品牌，由一群音訊演算法專家與聲學工程師共同創立，品牌理念是「重新定義聆聽體驗」。感謝 XROUND 贊助今晚的抽獎耳機。</div>
+    <div class="feat">
+      <span class="badge">今晚抽獎獎品</span>
+      <img src="https://img.shoplineapp.com/media/image_clips/6abb34a3f8036ec5b626915e/original.jpg" alt="XROUND VeraClip 開放式耳夾耳機" loading="lazy" width="1080" height="1080">
+      <div class="bd"><h3>VeraClip 開放式耳夾耳機</h3>
+        <p>像耳環一樣夾在耳朵上的開放式耳機，不塞耳、久戴舒適，造型百搭，也能當作配件。</p>
+        <a class="btn" href="https://www.xround.co/products/veraclip" target="_blank" rel="noopener">前往官網看 VeraClip</a></div>
+    </div>
+    <h2 class="h"><span class="en">More Gear</span>更多 XROUND 產品</h2>
+    <div class="pgrid" id="pgrid"></div>
+    <p class="note">產品資訊整理自 XROUND 官網 xround.co，規格與價格以官網為準。</p>
+  </section>
+</main>
+<footer class="wrap"><b>XROUND × 啤酒發射台</b>Rock your night・Music・Beer・Friends</footer>
+
 <script>
 const SONGS = [{"title": "好膽你就來", "artist": "阿密特", "original": null, "bilingual": false, "sections": [{"lines": ["攏細你啦 攏細你啦", "攏細你害我的面來紅紅", "你的心我的心結結作一伙 是要打算按怎"], "chorus": false}, {"lines": ["攏細你啦 攏細你啦", "攏細你害我整天在茫茫", "你的心我的心現在賣擱假"], "chorus": false}, {"lines": ["要討我的愛 好膽你就來", "賣放底心內 怨嘆沒人知", "思念作風颱 心情三溫暖", "其實我攏知 好膽你就來"], "chorus": true}, {"lines": ["攏細你啦 攏細你啦", "攏細你害我來氣心魯命", "你的心我的心結結作一伙 是要打算按怎"], "chorus": false}, {"lines": ["攏細你啦 攏細你啦", "攏細你害我整天在火大", "你的心我的心現在賣擱假"], "chorus": false}, {"lines": ["要討我的愛 好膽你就來", "賣放底心內 怨嘆沒人知", "思念作風颱 心情三溫暖", "其實我攏知 好膽你就來"], "chorus": true}, {"lines": ["要討我的愛 好膽你就來", "賣放底心內 怨嘆沒人知", "思念作風颱 心情三溫暖", "其實我攏知", "要討我的愛 好膽你就來", "賣放底心內 怨嘆沒人知", "思念作風颱 心情三溫暖", "其實我攏知 好膽你就來"], "chorus": true}]}, {"title": "彩虹", "artist": "動力火車", "original": null, "bilingual": false, "sections": [{"lines": ["身為一道彩虹 雨過了就該閃亮整片天空", "讓我深愛的你感到光榮"], "chorus": true}, {"lines": ["身為一道彩虹 盡全力也要換你一段笑容", "夠了 我愛你 不必人懂 (不必人懂)"], "chorus": true}, {"lines": ["只要不醒過來 這就不是夢", "請看著我 請擁抱我 體溫別流走"], "chorus": false}, {"lines": ["好多話想說 好多事要做", "請天空給我 請時間給我 再多一點停留"], "chorus": false}, {"lines": ["身為一道彩虹 雨過了就該閃亮整片天空", "讓我深愛的你感到光榮"], "chorus": true}, {"lines": ["身為一道彩虹 盡全力也要換你一段笑容", "夠了 我愛你 不必人懂"], "chorus": true}, {"lines": ["親愛的你 若有感動 請牢記在心中", "下一次下雨 你能看見的 那道彩虹 不再可能是我"], "chorus": false}, {"lines": ["身為一道彩虹 雨過了就該閃亮整片天空", "讓我深愛的你感到光榮"], "chorus": true}, {"lines": ["身為一道彩虹 盡全力也要換你一段笑容", "夠了 我愛你 不必人懂 (只要你懂)"], "chorus": true}, {"lines": ["身為一道彩虹 雨過了就該閃亮整片天空", "讓我深愛的你感到光榮"], "chorus": true}, {"lines": ["身為一道彩虹 身為一道彩虹"], "chorus": false}]}, {"title": "金盞花", "artist": "愛繆 あいみょん", "original": "マリーゴールド", "bilingual": true, "sections": [{"lines": [["風の強さがちょっと", "喧囂的風兒"], ["心を揺さぶりすぎて", "將心靈吹拂得過於飄忽不定了些"], ["真面目に見つめた", "而我眷戀著"], ["君が恋しい", "那認真地注視著的妳"]], "chorus": false}, {"lines": [["でんぐり返しの日々", "在那些一成不變的日子裡"], ["可哀想なふりをして", "以可憐將自己包裝了起來"], ["だらけてみたけど", "儘管過得無所事事"], ["希望の光は", "但希望的光芒"]], "chorus": false}, {"lines": [["目の前でずっと輝いている", "卻始終在眼前熠熠生輝著"], ["幸せだ", "讓我幸福不已"]], "chorus": false}, {"lines": [["麦わらの帽子の君が", "戴著草帽的妳"], ["揺れたマリーゴールドに似てる", "與那片伴風搖曳的金盞花甚是相似"], ["あれは空がまだ青い夏のこと", "譜寫在那個天空仍蔚藍的夏季裡"], ["懐かしいと笑えたあの日の恋", "讓我們直笑說懷念的那日戀情"]], "chorus": true}, {"lines": [["「もう離れないで」と", "一句「不要再離我而去了」"], ["泣きそうな目で見つめる君を", "以泫然欲泣的雙眼看著我的妳"], ["雲のような優しさでそっとぎゅっと", "讓我以雲朵般的溫柔悄然卻有力地"], ["抱きしめて 抱きしめて 離さない", "將妳緊緊擁在懷中，不再放開"]], "chorus": true}, {"lines": [["本当の気持ち全部", "儘管我並沒有堅強到"], ["吐き出せるほど強くはない", "能夠將所有的真心話傾吐而出"], ["でも不思議なくらいに", "但我卻不可思議地"], ["絶望は見えない", "始終未曾遭逢絕望"]], "chorus": false}, {"lines": [["目の奥にずっと写るシルエット", "始終倒映在眼眸深處的剪影"], ["大好きさ", "讓我分外喜愛"]], "chorus": false}, {"lines": [["柔らかな肌を寄せあい", "兩人依偎著彼此柔軟的肌膚"], ["少し冷たい空気を2人", "吸進了些許冰冷的空氣"], ["かみしめて歩く今日という日に", "感慨萬千地並肩走在路上"], ["何と名前をつけようかなんて話して", "討論著該為今天這日子取什麼名字"]], "chorus": false}, {"lines": [["ああ アイラブユーの言葉じゃ", "啊啊，僅僅一句I LOVE YOU"], ["足りないからとキスして", "不足以聊表愛意，於是便親吻了妳"], ["雲がまだ2人の影を残すから", "雲朵間仍存留著兩人的倒影"], ["いつまでも いつまでも このまま", "直到遙遠不已的未來，始終不變"]], "chorus": true}, {"lines": [["遥か遠い場所にいても", "哪怕身處在遙遠之地"], ["繋がっていたいなあ", "也想片刻感受著妳"], ["2人の想いが", "只願彼此的思緒"], ["同じでありますように", "能夠心有靈犀"]], "chorus": false}, {"lines": [["麦わらの帽子の君が", "戴著草帽的妳"], ["揺れたマリーゴールドに似てる", "與那片伴風搖曳的金盞花甚是相似"], ["あれは空がまだ青い夏のこと", "譜寫在那個天空仍蔚藍的夏季裡"], ["懐かしいと笑えたあの日の恋", "讓我們直笑說懷念的那日戀情"]], "chorus": true}, {"lines": [["「もう離れないで」と", "一句「不要再離我而去了」"], ["泣きそうな目で見つめる君を", "以泫然欲泣的雙眼看著我的妳"], ["雲のような優しさでそっとぎゅっと", "讓我以雲朵般的溫柔悄然卻有力地"], ["抱きしめて 離さない", "將妳緊擁在懷中，不再放開"]], "chorus": true}, {"lines": [["ああ アイラブユーの言葉じゃ", "啊啊，僅僅一句I LOVE YOU"], ["足りないからとキスして", "不足以聊表愛意，於是便親吻了妳"], ["雲がまだ2人の影を残すから", "雲朵間仍存留著兩人的倒影"], ["いつまでも いつまでも このまま", "直到遙遠不已的未來，始終不變"]], "chorus": true}, {"lines": [["離さない", "不再放開"], ["いつまでも いつまでも 離さない", "直到遙遠不已的未來，都不再放開"]], "chorus": false}]}];
-const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const MEMBERS = [
+ ["Eric","周倍慶","Eric","爵士鼓兼團長","2019 生醫組","團隊的節奏靈魂，總是用穩健的鼓聲凝聚全場。"],
+ ["大未來","賴建芳","大未來","吉他 / 主唱","2019 全企組","高亢的歌聲和吉他的清脆旋律為團隊定下主色調。"],
+ ["秀秀","曾秀鳳","秀秀","電吉他兼主唱","2019 國金組","細膩與搖滾兼具的聲音，為演出增添多層次風味。"],
+ ["雅雯","陳雅雯","","鍵盤","2020 全企組","以靈動的琴聲編織樂曲細節。"],
+ ["Steven","翁振源","Steven","電吉他兼主唱","2022 國金","為樂團注入更多搖滾能量和即興火花。"],
+ ["Teresa","鄧玉霞","Teresa","貝斯兼主唱","2024 國金","以沉穩Bass低頻、高亢的歌聲支撐全團的節奏感與厚度。"]];
+const IMG='https://img.shoplineapp.com/media/image_clips/';
+const PRODUCTS = [
+ ["FORGE PRO 智慧降噪耳機","自適應主動降噪、IP67 防塵防水，運動、通勤、日常一支搞定。","forge-pro","6764dbf9b3ca06000ee7d9af/original.png"],
+ ["AERO PRO 2 低延遲降噪耳機","低延遲加高解析音質，打遊戲、聽音樂都適合。","aero-pro-2","6a32b7505b6bba7c4b34add8/original.jpg"],
+ ["VOCA MAX 旗艦降噪耳罩耳機","主動降噪加通話降噪，專心工作、安心開會。","voca-max","69f998dae8fc8486a45bba43/original.jpg"],
+ ["VIBE 防水環繞藍牙音響","室內戶外兩用，兩台可以無線串聯成雙聲道。","vibe-bluetooth-speaker","67bfe4c5b40add000e44e603/original.jpg"],
+ ["HEAR AI 輔聽耳機","音樂耳機結合輔聽功能，聽音樂、通話、輔聽一機多用。","hear-ai-earbuds","67bfe450ec4f19000e8214bc/original.jpg"]];
+const PHOTOS = {};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* 歌詞 */
 const tl=document.getElementById('tablist'),box=document.getElementById('songs');
 SONGS.forEach((s,i)=>{
   const b=document.createElement('button');b.className='tab';b.setAttribute('role','tab');b.id='t'+i;
-  b.innerHTML=`<span class="n">${i+1}</span> ${esc(s.title)}<small>${esc(s.artist)}</small>`;b.onclick=()=>show(i,true);tl.appendChild(b);
+  b.innerHTML=`<span class="n">${i+1}</span> ${esc(s.title)}<small>${esc(s.artist)}</small>`;b.onclick=()=>go('lyrics',i,true);tl.appendChild(b);
   const el=document.createElement('section');el.className='song';el.id='s'+i;el.setAttribute('role','tabpanel');
   let h=`<h2>${esc(s.title)}${s.original?`<span class="o">${esc(s.original)}</span>`:''}</h2><p class="artist">${esc(s.artist)}</p>`;
   if(s.bilingual)h+=`<div class="mode"><button aria-pressed="true" data-m="both">中日對照</button><button aria-pressed="false" data-m="jp">只看日文</button><button aria-pressed="false" data-m="zh">只看中文</button></div>`;
@@ -160,11 +296,34 @@ SONGS.forEach((s,i)=>{
 box.addEventListener('click',e=>{const b=e.target.closest('.mode button');if(!b)return;const m=b.dataset.m,body=b.parentNode.nextElementSibling;
   b.parentNode.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));
   body.classList.toggle('hide-zh',m==='jp');body.classList.toggle('hide-jp',m==='zh');});
-function show(i,scroll){SONGS.forEach((_,j)=>{document.getElementById('t'+j).setAttribute('aria-selected',j===i);document.getElementById('s'+j).classList.toggle('on',j===i);});
-  history.replaceState(null,'','#'+(i+1));if(scroll){const y=document.querySelector('nav.tabs').offsetTop;if(scrollY>y)scrollTo(0,y);}}
-const hh=parseInt(location.hash.slice(1));show(hh>=1&&hh<=SONGS.length?hh-1:0,false);
-if(true){const hero=document.querySelector('.hero');for(let k=0;k<14;k++){const d=document.createElement('span');d.className='bub';const s=4+Math.random()*10;
-  d.style.cssText=`left:${Math.random()*100}%;width:${s}px;height:${s}px;animation-duration:${4+Math.random()*5}s;animation-delay:-${Math.random()*6}s`;hero.appendChild(d);}}
+
+/* 團員 */
+document.getElementById('mgrid').innerHTML=MEMBERS.map(([k,n,nick,role,coh,d])=>{
+  const ph=PHOTOS[k]?`<img src="${esc(PHOTOS[k])}" alt="${esc(n)} ${esc(nick)}" loading="lazy" width="600" height="800">`:`<span class="ini">${esc((nick||n).slice(0,2))}</span>`;
+  return `<article class="mcard"><div class="ph">${ph}<div class="nm">${esc(n)}${nick?`<span>${esc(nick)}</span>`:''}</div></div>
+  <div class="bd"><p class="role">${esc(role)}</p><p class="cohort">EMBA ${esc(coh)}</p><p class="desc">${esc(d)}</p></div></article>`}).join('');
+
+/* 產品 */
+document.getElementById('pgrid').innerHTML=PRODUCTS.map(([t,d,h,img])=>
+ `<a class="pcard" href="https://www.xround.co/products/${h}" target="_blank" rel="noopener"><img src="${IMG+img}" alt="XROUND ${esc(t)}" loading="lazy" width="1080" height="1080">
+  <div class="bd"><h3>${esc(t)}</h3><p>${esc(d)}</p><span class="go">前往官網 →</span></div></a>`).join('');
+
+/* 導覽：#1~#3 歌詞、#tonight、#band、#xround */
+const PAGES=['lyrics','tonight','band','xround'];
+function go(p,song,scroll){
+  document.querySelectorAll('.mt').forEach(b=>b.setAttribute('aria-selected',b.dataset.p===p));
+  PAGES.forEach(x=>document.getElementById('p-'+x).classList.toggle('on',x===p));
+  if(p==='lyrics'){const i=song??0;SONGS.forEach((_,j)=>{document.getElementById('t'+j).setAttribute('aria-selected',j===i);document.getElementById('s'+j).classList.toggle('on',j===i);});
+    history.replaceState(null,'','#'+(i+1));}
+  else history.replaceState(null,'','#'+p);
+  if(scroll){const y=document.querySelector('nav.main').offsetTop;if(scrollY>y)scrollTo({top:y});}
+}
+document.querySelectorAll('.mt').forEach(b=>b.onclick=()=>go(b.dataset.p,b.dataset.p==='lyrics'?curSong():0,true));
+function curSong(){const on=document.querySelector('.song.on');return on?+on.id.slice(1):0}
+document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;e.preventDefault();route(a.getAttribute('href').slice(1),true);});
+function route(h,scroll){const n=parseInt(h);if(n>=1&&n<=SONGS.length)return go('lyrics',n-1,scroll);if(PAGES.includes(h))return go(h,0,scroll);go('lyrics',0,scroll);}
+route(location.hash.slice(1),false);
+addEventListener('hashchange',()=>route(location.hash.slice(1),false));
 </script>
 </body>
 </html>
