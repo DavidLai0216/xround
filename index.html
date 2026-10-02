@@ -174,6 +174,9 @@ nav.main{position:sticky;top:0;z-index:20;background:rgba(7,5,5,.96);border-bott
 .lb .x{top:14px;right:14px}.lb .pv{left:8px;top:50%;transform:translateY(-50%)}.lb .nx{right:8px;top:50%;transform:translateY(-50%)}
 .lb .cap{position:absolute;bottom:14px;left:0;right:0;text-align:center;color:var(--muted);font-size:14px}
 @media (max-height:600px){.logo{width:min(38vw,150px)}.hero{padding-bottom:12px}.eventbar{margin-top:10px}}
+.groupfig{margin:4px 0 22px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.groupfig img{display:block;width:100%;height:auto}
+.groupfig figcaption{padding:8px 12px;font-size:14px;color:var(--muted);background:var(--panel)}
 footer{text-align:center;padding:22px 0 44px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
 footer b{display:block;font-family:inherit;font-weight:900;letter-spacing:.08em;color:#fff;font-size:18px;margin-bottom:2px}
 
@@ -263,6 +266,7 @@ footer b{display:block;font-family:inherit;font-weight:900;letter-spacing:.08em;
 
   <!-- 團員 -->
   <section class="page about" id="p-band" role="tabpanel">
+    <figure class="groupfig"><img src="group/group-2026.jpg?v=e10c1d2e" alt="XROUND 啤酒發射台 2026 團員合照" width="900" height="1200"><figcaption>2026 啤酒發射台 合照</figcaption></figure>
     <h2 class="h"><span class="en">The Band</span>關於啤酒發射台</h2>
     <p>啤酒發射台樂團成員來自不同背景，卻因對音樂的熱情走在一起。有些人延續著年少時的音樂夢，有些人因友情而踏上這條舞台之路，在彼此的鼓勵和支持下組成了這支樂團。經過數月的練團、磨合與碰撞，每位團員不僅在音樂上更契合，也在彼此的陪伴中收穫深厚情誼。</p><p>今年啤酒發射台再次登上玩樂社成果發表會的舞台，每一次演出對我們來說都是熱情與能量的釋放，更是對夢想的一次致敬。我們期待用最真摯的音符，與現場的每一位朋友分享這段旅程的感動與快樂。</p>
     <div class="leo"></div>
@@ -315,7 +319,7 @@ const PRODUCTS = [
  ["VOCA MAX 旗艦降噪耳罩耳機","主動降噪加通話降噪，專心工作、安心開會。","voca-max","69f998dae8fc8486a45bba43/original.jpg"],
  ["VIBE 防水環繞藍牙音響","室內戶外兩用，兩台可以無線串聯成雙聲道。","vibe-bluetooth-speaker","67bfe4c5b40add000e44e603/original.jpg"],
  ["HEAR AI 輔聽耳機","音樂耳機結合輔聽功能，聽音樂、通話、輔聽一機多用。","hear-ai-earbuds","67bfe450ec4f19000e8214bc/original.jpg"]];
-const PHOTOS = {"大未來": "photos/daweilai.jpg?v=d28bdf55", "Steven": "photos/steven.jpg?v=466c3de6", "Teresa": "photos/teresa.jpg?v=af16c919", "秀秀": "photos/xiuxiu.jpg?v=93c439b3", "雅雯": "photos/yawen.jpg?v=9164de33"};
+const PHOTOS = {"大未來": "photos/daweilai.jpg?v=d28bdf55", "Eric": "photos/eric.jpg?v=f8310e32", "Steven": "photos/steven.jpg?v=466c3de6", "Teresa": "photos/teresa.jpg?v=af16c919", "秀秀": "photos/xiuxiu.jpg?v=93c439b3", "雅雯": "photos/yawen.jpg?v=9164de33"};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 /* 歌詞 */
@@ -352,7 +356,7 @@ const HISTORY=[
  [2024,[["帶我去找夜生活","告五人"],["倔強","五月天"]]],
  [2023,[["天天想你","張雨生"],["愛在夏天","告五人"]]]];
 document.getElementById('tl').innerHTML=HISTORY.map(([y,ss])=>`<li class="${y===2026?'now':''}"><div class="yr">${y}${y===2026?'<b>本屆</b>':''}</div><ul>${ss.map(([t,a])=>`<li>〈${esc(t)}〉<small>${esc(a)}</small></li>`).join('')}</ul></li>`).join('');
-const GALLERY = {"2025": ["gallery/2025/full/2025-daweilai-stage.jpg?v=34d58ee9"], "2026": ["gallery/2026/full/2026-steven-rehearsal.jpg?v=793a3c7d", "gallery/2026/full/2026-xiuxiu-rehearsal-1.jpg?v=c9748b29", "gallery/2026/full/2026-xiuxiu-rehearsal-2.jpg?v=697cf60d"]};
+const GALLERY = {"2025": ["gallery/2025/full/2025-daweilai-stage.jpg?v=34d58ee9"], "2026": ["gallery/2026/full/2026-group.jpg?v=c38d4ce1", "gallery/2026/full/2026-steven-rehearsal.jpg?v=793a3c7d", "gallery/2026/full/2026-xiuxiu-rehearsal-1.jpg?v=c9748b29", "gallery/2026/full/2026-xiuxiu-rehearsal-2.jpg?v=697cf60d"]};
 const gEl=document.getElementById('gallery');const flat=[];
 const years=Object.keys(GALLERY).sort((a,b)=>b.localeCompare(a));
 if(!years.length){gEl.innerHTML='<div class="empty"><div class="ic">📸</div><b>照片整理中</b>歷年演出與練團照片，敬請期待！</div>';}
